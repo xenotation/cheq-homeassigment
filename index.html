@@ -5,20 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CHEQ Test Page</title>
 
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      ad_storage: 'denied'
+    });
+  </script>
+
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W2T9FJ6F');</script>
-    <!-- End Google Tag Manager -->
+    })(window,document,'script','dataLayer','GTM-W2T9FJ6F');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
-  <h1>CHEQ Test Page</h1>
-  <p>Home Assigment</p>
-</body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2T9FJ6F"
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2T9FJ6F"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
+
+  <h1>CHEQ Test Page</h1>
+  <p>Home Assignment</p>
+
+  <button onclick="grantConsent()">Grant Consent</button>
+
+  <script>
+    function grantConsent() {
+      gtag('consent', 'update', {
+        ad_storage: 'granted'
+      });
+      alert('Consent granted. Reload the page or re-test in GTM Preview.');
+    }
+  </script>
+</body>
 </html>
